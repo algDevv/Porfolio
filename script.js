@@ -145,7 +145,7 @@ hamburgerButton.addEventListener("click", () => {
 
     setTimeout(function () {
       masquerMenu();
-      CloseBtn.src = "../ressources/images/icons8-menu-50.png";
+      CloseBtn.src = "ressources/images/icons8-menu-50.png";
       estouvert = false;
       CloseBtn.style.opacity = "1";
       CloseBtn.style.transition = "0.7s";
@@ -163,7 +163,7 @@ hamburgerButton.addEventListener("click", () => {
     setTimeout(function () {
       CloseBtn.style.opacity = "1";
       CloseBtn.style.transition = "0.7s";
-      CloseBtn.src = "../ressources/images/icons8-effacer-50.png";
+      CloseBtn.src = "ressources/images/icons8-effacer-50.png";
       mobileBtnMenu.style.opacity = '1';
       mobileLinks.forEach(element => {
         element.style.opacity = '1';
@@ -187,7 +187,7 @@ function GoToLink() {
     mobileMenu.style.display = 'none';
     estouvert = false;
     body.style.overflowY = 'auto';
-    CloseBtn.src = "../ressources/images/icons8-menu-50.png";
+    CloseBtn.src = "ressources/images/icons8-menu-50.png";
   }
 }
 function lightWebSite() {
