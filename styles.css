@@ -523,6 +523,9 @@ header {
 .Apropos_lien-container h3:hover {
   color: var(--clr-red);
 }
+#Chekbox_para{
+  font-size: var(--size-xs);
+}
 .logo>img{
   margin: 0 auto;
 }
