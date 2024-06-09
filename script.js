@@ -78,7 +78,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       target.classList.add('loaded');
       observer.unobserve(target);
       target.src = target.dataset.src;
-      observer.unobserve(target);
+      
 
     }
   });

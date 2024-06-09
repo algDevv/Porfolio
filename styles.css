@@ -599,7 +599,8 @@ a {
   filter: blur(40px) grayscale(100%);
 }
 .loaded {
-  filter: blur(0) grayscale(0);
+  /*filter: blur(0) grayscale(0);*/
+  filter: none;
   transition: 0.7s ease-in-out;
 }
 .close_btn{
