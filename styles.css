@@ -334,9 +334,7 @@ header {
   box-shadow: rgba(79, 70, 229, 0.4) 5px 5px, rgba(79, 70, 229, 0.3) 10px 10px, rgba(79, 70, 229, 0.2) 15px 15px, rgba(79, 70, 229, 0.1) 20px 20px, rgba(79, 70, 229, 0.05) 25px 25px;
 }
 
-#experiences{
-  margin-top: 2rem;
-}
+
 .projet {
   display: flex;
   flex-direction: column;
@@ -347,6 +345,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 4rem;
 }
 .projet_titre {
   font-size: var(--size-xl);
