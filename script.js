@@ -74,12 +74,10 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       let target = entry.target;
+      target.src = target.dataset.src;
       target.classList.remove('loading');
       target.classList.add('loaded');
       observer.unobserve(target);
-      target.src = target.dataset.src;
-      
-
     }
   });
 });

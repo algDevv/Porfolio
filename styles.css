@@ -596,12 +596,11 @@ a {
   font-size: var(--size-sm);
 }
 .loading {
-  filter: blur(40px) grayscale(100%);
+  opacity: 0;
 }
 .loaded {
-  /*filter: blur(0) grayscale(0);*/
-  filter: none;
-  transition: 0.7s ease-in-out;
+  opacity: 1;
+  transition: 0.8s ease-in-out;
 }
 .close_btn{
   width: 30px;
