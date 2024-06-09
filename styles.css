@@ -600,7 +600,7 @@ a {
 }
 .loaded {
   opacity: 1;
-  transition: 0.8s ease-in-out;
+  transition: 2s ease-in-out;
 }
 .close_btn{
   width: 30px;
