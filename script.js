@@ -22,8 +22,6 @@ title.style.display = 'flex';
 title.style.flexDirection = 'column';
 
 
-
-
 const Scroll = document.querySelectorAll(".scroll");
 
 const observer2 = new IntersectionObserver((entries, observer) => {
@@ -108,32 +106,10 @@ setTimeout(function () {
   });
 }, 1000);
 
-function disableScroll() {
-  // Enregistrer la position de défilement actuelle
-  scrollPosition = window.pageYOffset;
-  body.style.overflow = 'hidden';
-  body.style.position = 'fixed';
-  body.style.top = `-${scrollPosition}px`;
-  body.style.width = '100%';
-
-  // Ajouter des écouteurs d'événements pour empêcher le défilement sur mobile
-  window.addEventListener('touchmove', preventScroll, { passive: false });
-}
-
-function enableScroll() {
-  body.style.overflow = '';
-  body.style.position = '';
-  body.style.top = '';
-  body.style.width = '';
-  window.scrollTo(0, scrollPosition);
-
-  // Supprimer les écouteurs d'événements
-  window.removeEventListener('touchmove', preventScroll, { passive: false });
-} 
 
 function masquerMenu() {
   mobileMenu.style.display = 'none';
-  body.style.overflowY = 'auto';
+  body.style.overflow = 'auto';
   estouvert = false;
 }
 
@@ -177,7 +153,7 @@ hamburgerButton.addEventListener("click", () => {
 
   } else {
     mobileMenu.style.display = 'flex';
-    body.style.overflowY = 'hidden';
+    body.style.overflow = 'hidden';
 
 
     setTimeout(function () {
@@ -206,7 +182,7 @@ function GoToLink() {
   if (estouvert) {
     mobileMenu.style.display = 'none';
     estouvert = false;
-    body.style.overflowY = 'auto';
+    body.style.overflow = 'auto';
     CloseBtn.src = "ressources/images/icons8-menu-50.png";
   }
 }
