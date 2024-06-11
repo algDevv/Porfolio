@@ -137,7 +137,7 @@ hamburgerButton.addEventListener("click", () => {
   mobileLightButton.style.transition = "0.7s";
 
 
-  if (estouvert) {
+  if (estouvert===true) {
 
     setTimeout(function () {
       masquerMenu();
@@ -153,7 +153,8 @@ hamburgerButton.addEventListener("click", () => {
 
   } else {
     mobileMenu.style.display = 'flex';
-    body.style.overflowY = 'hidden';
+    mobileMenu.style.height = '100vh';
+    body.classList.add('no-scroll');
 
 
     setTimeout(function () {
@@ -306,6 +307,7 @@ function validateForm() {
 
 }
 document.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
   var formulaire = document.querySelector(".form");
   var envoyerBouton = document.getElementById("envoyer");
   formulaire.addEventListener("submit", function (event) {

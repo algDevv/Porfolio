@@ -52,6 +52,9 @@ body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
 }
+.no-scroll{
+  overflow-y: hidden;
+}
 button {
   display: inline-block;
   padding: 0;
@@ -541,7 +544,6 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow-y: hidden;
 }
 .mobile-nav_menu {
   display: flex;
