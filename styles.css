@@ -541,6 +541,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow-y: hidden;
 }
 .mobile-nav_menu {
   display: flex;
