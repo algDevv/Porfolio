@@ -22,6 +22,8 @@ title.style.display = 'flex';
 title.style.flexDirection = 'column';
 
 
+
+
 const Scroll = document.querySelectorAll(".scroll");
 
 const observer2 = new IntersectionObserver((entries, observer) => {
@@ -106,6 +108,28 @@ setTimeout(function () {
   });
 }, 1000);
 
+function disableScroll() {
+  // Enregistrer la position de défilement actuelle
+  scrollPosition = window.pageYOffset;
+  body.style.overflow = 'hidden';
+  body.style.position = 'fixed';
+  body.style.top = `-${scrollPosition}px`;
+  body.style.width = '100%';
+
+  // Ajouter des écouteurs d'événements pour empêcher le défilement sur mobile
+  window.addEventListener('touchmove', preventScroll, { passive: false });
+}
+
+function enableScroll() {
+  body.style.overflow = '';
+  body.style.position = '';
+  body.style.top = '';
+  body.style.width = '';
+  window.scrollTo(0, scrollPosition);
+
+  // Supprimer les écouteurs d'événements
+  window.removeEventListener('touchmove', preventScroll, { passive: false });
+} 
 
 function masquerMenu() {
   mobileMenu.style.display = 'none';
@@ -137,7 +161,7 @@ hamburgerButton.addEventListener("click", () => {
   mobileLightButton.style.transition = "0.7s";
 
 
-  if (estouvert===true) {
+  if (estouvert) {
 
     setTimeout(function () {
       masquerMenu();
@@ -153,8 +177,7 @@ hamburgerButton.addEventListener("click", () => {
 
   } else {
     mobileMenu.style.display = 'flex';
-    mobileMenu.style.height = '100vh';
-    body.classList.add('no-scroll');
+    body.style.overflowY = 'hidden';
 
 
     setTimeout(function () {
@@ -307,7 +330,6 @@ function validateForm() {
 
 }
 document.addEventListener("DOMContentLoaded", function () {
-  window.scrollTo(0, 0);
   var formulaire = document.querySelector(".form");
   var envoyerBouton = document.getElementById("envoyer");
   formulaire.addEventListener("submit", function (event) {
