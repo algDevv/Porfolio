@@ -109,7 +109,7 @@ setTimeout(function () {
 
 function masquerMenu() {
   mobileMenu.style.display = 'none';
-  body.style.overflowY = 'auto';
+  body.style.overflowY = 'hidden';
   estouvert = false;
 }
 
